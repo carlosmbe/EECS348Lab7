@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<title>Section 2 of Lab 7</title>
+<style>
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  #custom {
+    border: 1px solid black;
+    padding: 20px;
+    margin: 20px;
+  }
+  .slider-container {
+      margin-top: 10px;
+  }
+
+</style>
+</head>
+<body>
+
+<h1 style="color:red;">Dummy Text, a Speech</h1>
+
+<p id="custom"> Wake up to reality! Nothing ever goes as planned in this accursed world. The longer you live, the more you realize that the only things that truly exist in this reality are merely pain. suffering and futility. Listen, everywhere you look in this world, wherever there is light, there will always be shadows to be found as well. As long as there is a concept of victors, the vanquished will also exist. The selfish intent of wanting to preserve peace, initiates war. and hatred is born in order to protect love. There are nexuses causal relationships that cannot be separated.
+</p>
+
+<h2>- Madara Uchiha</h2>
+
+<div class="slider-container">
+    <label for="borderWidthInput">Border Width:</label>
+    <input type="range" id="borderWidthInput" min="0" max="10" step="1" value="1">
+</div>
+
+
+<label for="rgb">Enter RGB values (e.g., 255,0,0):</label>
+<input type="text" id="rgb" placeholder="255,0,0">
+
+ <button onclick="applyStyles()">Change Color!!!</button>
+
+
+    <script>
+        const borderWidthInput = document.getElementById('borderWidthInput');
+        const myParagraph = document.getElementById('custom');
+
+        borderWidthInput.addEventListener('input', () => {
+            const borderWidth = borderWidthInput.value;
+            myParagraph.style.borderWidth = `${borderWidth}px`;
+        });
+
+        function applyStyles() {
+              var rgb = document.getElementById('rgb').value;
+              var myParagraph = document.getElementById('custom');
+              myParagraph.style.borderColor = `rgb(${rgb})`;
+              myParagraph.style.color = `rgb(${rgb})`;
+}
+
+
+    </script>
+
+</body>
+</html>
+
